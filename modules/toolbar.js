@@ -29,7 +29,7 @@ class Toolbar extends Module {
     Object.keys(this.options.handlers).forEach((format) => {
       this.addHandler(format, this.options.handlers[format]);
     });
-    [].forEach.call(this.container.querySelectorAll('button, select'), (input) => {
+    [].forEach.call(this.container.querySelectorAll('div', 'button, select'), (input) => {
       this.attach(input);
     });
     this.quill.on(Quill.events.EDITOR_CHANGE, (type, range) => {
